@@ -1,0 +1,18 @@
+1. install pyaudio using pipwin - install pipwin normally then use 'pipwin' instead of 'pip' to install pyaudio
+
+2. Have a sleep time between starting the speaker mp3 file in text to speech and deleting the file
+
+3. Other known exceptions are added (but commented) for the recognizer.google(audio) function returned value
+
+4. The text to speech is only used when there is something meaningful to say
+
+5. Added a file storing all possible request and response messages
+
+
+IDEAS to put later:
+
+1. ask current weather (get live update somehow)
+
+2. when closing app ask for a confirmation reply
+
+3.
