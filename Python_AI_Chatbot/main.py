@@ -28,6 +28,9 @@ class ChatBot():
         print("----- Starting up", name, "-----")
         self.name = name
 
+    def get_text(self):
+        return self.text
+
     # bot's way to convert speech to text
     def speech_to_text(self):
         recognizer = sr.Recognizer()
@@ -85,7 +88,7 @@ if __name__ == "__main__":
 
         try:
             # get the text heard by dev_bot
-            dev_bot_txt = dev_bot.text
+            dev_bot_txt = dev_bot.get_text()
         except:
             continue
 
@@ -98,6 +101,8 @@ if __name__ == "__main__":
         # say wecome if Thanks is conveyed
         elif any(i in dev_bot_txt.lower() for i in req_messages["thank"]):
             res = np.random.choice(resp_messages["welcome"])
+        else:
+            res = ""
 
         # convert to speech only if it has some text to speak out
         if res:
